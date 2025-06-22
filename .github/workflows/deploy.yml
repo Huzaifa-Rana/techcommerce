@@ -20,10 +20,14 @@ jobs:
 
       - name: Deploy to Namecheap Server
         run: |
+          echo "Connecting to server..."
           ssh -o StrictHostKeyChecking=no huzakdhg@huzaifarana.tech -p 21098 "
             cd public_html/techcommerce &&
+            echo 'Connected. Pulling code...' &&
             git pull origin main &&
+            echo 'Running composer install...' &&
             composer install --no-dev &&
+            echo 'Migrating database...' &&
             php artisan migrate --force &&
             php artisan config:cache &&
             php artisan route:cache &&
