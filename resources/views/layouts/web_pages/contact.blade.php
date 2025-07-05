@@ -36,7 +36,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-11 col-lg-9 col-xl-8">
                     <div class="tab-content bg-body rounded-5 py-3 py-sm-4 px-4 px-sm-5">
-                        <p class="text-center py-3 mx-auto" style="max-width: 450px">Fill out the form below and we will reply within 24 hours. You may also directly reach out to us at <a class="text-decoration-none" href="mailto:info@cartzilla.com">info@cartzilla.com</a></p>
+                        <p class="text-center py-3 mx-auto" style="max-width: 450px">Fill out the form below and we will reply within 24 hours. You may also directly reach out to us at <a class="text-decoration-none" href="mailto:info@techcommerce.com">info@techcommerce.com</a></p>
 
                         <!-- Customers form -->
                         <div class="tab-pane fade show active" id="customers" role="tabpanel" aria-labelledby="customers-tab">
@@ -169,7 +169,7 @@
                 <i class="ci-mail bg-body-secondary text-white fs-4 rounded-circle p-3 mb-3 d-none d-inline-flex-dark"></i>
                 <h3 class="text-body fs-sm fw-normal mb-2">Send us a message</h3>
                 <div class="nav animate-underline justify-content-center">
-                    <a class="nav-link animate-target text-dark-emphasis fs-base p-0" href="mailto:info@cartzilla.com">info@cartzilla.com</a>
+                    <a class="nav-link animate-target text-dark-emphasis fs-base p-0" href="mailto:info@techcommerce.com">info@techcommerce.com</a>
                 </div>
             </div>
             <div class="col text-center">
