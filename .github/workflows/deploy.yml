@@ -23,6 +23,8 @@ jobs:
           echo "Connecting to server..."
           ssh -o StrictHostKeyChecking=no huzakdhg@huzaifarana.tech -p 21098 "
             cd public_html/techcommerce &&
+            echo 'Resetting local changes...' &&
+            git reset --hard HEAD &&
             echo 'Connected. Pulling code...' &&
             git pull origin main &&
             echo 'Running composer install...' &&
