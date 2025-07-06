@@ -10,11 +10,12 @@
                 </button>
 
                 <!-- Navbar brand (Logo) -->
-                <a href="index.html" class="navbar-brand me-0">
-                    <span class="d-none d-sm-flex flex-shrink-0 me-2">
+                <a href="{{ route('home') }}" class="navbar-brand me-0">
+                    <span class=" d-sm-flex flex-shrink-0 me-2">
                         <img src="assets/custom-icons/light-logo-techcommerece.svg" width="36" height="36" alt="Tech Commerce Logo">
                     </span>
-                    Tech Commerce
+                    <span class="d-none d-sm-inline">Tech Commerce</span>
+                    <span class="d-sm-none">TC</span>
                 </a>
             </div>
             <div class="col col-lg-9 d-flex align-items-center justify-content-end">
@@ -88,7 +89,7 @@
                     </button>
 
                     <!-- Account button visible on screens > 768px wide (md breakpoint) -->
-                    <a class="btn btn-icon btn-lg fs-lg btn-outline-secondary border-0 rounded-circle animate-shake d-none d-md-inline-flex" href="{{ route('account') }}">
+                    <a class="btn btn-icon btn-lg fs-lg btn-outline-secondary border-0 rounded-circle animate-shake d-none d-md-inline-flex" href="{{ route('account.orders') }}">
                         <i class="ci-user animate-target"></i>
                         <span class="visually-hidden">Account</span>
                     </a>

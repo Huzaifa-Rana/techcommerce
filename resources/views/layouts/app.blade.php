@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light" data-pwa="true">
+<html lang="en" data-bs-theme="light" data-pwa="false">
 <!-- Mirrored from cartzilla-html.createx.studio/home-electronics.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 28 Jun 2025 11:35:10 GMT -->
 <!-- Added by HTTrack -->
 <meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
@@ -19,7 +19,7 @@
 
   <!-- Webmanifest + Favicon / App icons -->
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <link rel="manifest" href="manifest.json">
+  <!-- <link rel="manifest" href="manifest.json"> -->
   <link rel="icon" type="image/svg+xml" href="assets/custom-icons/dark-logo-techcommerece.svg">
   <link rel="apple-touch-icon" href="assets/custom-icons/dark-logo-techcommerece.svg">
 

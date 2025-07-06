@@ -23,11 +23,23 @@ Route::get('/shop/checkout', function () {
 })->name('checkout');
 
 Route::prefix('account')->group(function () {
-    Route::get('/', function () {
-        return view('layouts.web_pages.account');
-    })->name('account');
+    Route::get('/orders', function () {
+        return view('layouts.user_pannel.pages.account_orders');
+    })->name('account.orders');
 
     Route::get('/wishlist', function () {
-        return view('layouts.web_pages.account_wishlist');
+        return view('layouts.user_pannel.pages.account_wishlist');
     })->name('account.wishlist');
+
+    Route::get('/payment', function () {
+        return view('layouts.user_pannel.pages.account_payment');
+    })->name('account.payment');
+
+    Route::get('/info', function () {
+        return view('layouts.user_pannel.pages.account_info');
+    })->name('account.info');
+
+    Route::get('/addresses', function () {
+        return view('layouts.user_pannel.pages.account_addresses');
+    })->name('account.addresses');
 });
