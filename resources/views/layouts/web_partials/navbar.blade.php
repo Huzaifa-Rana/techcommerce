@@ -26,7 +26,7 @@
                 </div>
 
                 <!-- Sale link visible on screens > 1200px wide (xl breakpoint) -->
-                <a class="d-none d-xl-flex align-items-center text-decoration-none animate-shake navbar-stuck-hide me-3 me-xl-4 me-xxl-5" href="shop-catalog-electronics.html">
+                <!-- <a class="d-none d-xl-flex align-items-center text-decoration-none animate-shake navbar-stuck-hide me-3 me-xl-4 me-xxl-5" href="shop-catalog-electronics.html">
                     <div class="btn btn-icon btn-lg fs-lg text-primary bg-body-secondary bg-opacity-75 pe-none rounded-circle">
                         <i class="ci-percent animate-target"></i>
                     </div>
@@ -34,7 +34,7 @@
                         <div class="fs-xs text-body">Only this month</div>
                         <div class="fw-medium text-white">Super Sale 20%</div>
                     </div>
-                </a>
+                </a> -->
 
                 <!-- Button group -->
                 <div class="d-flex align-items-center">
@@ -88,13 +88,13 @@
                     </button>
 
                     <!-- Account button visible on screens > 768px wide (md breakpoint) -->
-                    <a class="btn btn-icon btn-lg fs-lg btn-outline-secondary border-0 rounded-circle animate-shake d-none d-md-inline-flex" href="account-signin.html">
+                    <a class="btn btn-icon btn-lg fs-lg btn-outline-secondary border-0 rounded-circle animate-shake d-none d-md-inline-flex" href="{{ route('account') }}">
                         <i class="ci-user animate-target"></i>
                         <span class="visually-hidden">Account</span>
                     </a>
 
                     <!-- Wishlist button visible on screens > 768px wide (md breakpoint) -->
-                    <a class="btn btn-icon btn-lg fs-lg btn-outline-secondary border-0 rounded-circle animate-pulse d-none d-md-inline-flex" href="account-wishlist.html">
+                    <a class="btn btn-icon btn-lg fs-lg btn-outline-secondary border-0 rounded-circle animate-pulse d-none d-md-inline-flex" href="{{ route('account.wishlist') }}">
                         <i class="ci-heart animate-target"></i>
                         <span class="visually-hidden">Wishlist</span>
                     </a>
