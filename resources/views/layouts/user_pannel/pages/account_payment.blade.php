@@ -60,3 +60,84 @@
     </div>
 </div>
 @endsection
+
+@section('helper')
+<!-- Add payment method modal -->
+<div class="modal fade" id="addPaymentModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="addPaymentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addPaymentModalLabel">Add new payment method</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs mb-3" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button type="button" class="nav-link active" id="card-tab" data-bs-toggle="tab" data-bs-target="#card-tab-pane" role="tab" aria-controls="card-tab-pane" aria-selected="true">
+                            <i class="ci-credit-card fs-base opacity-75 ms-n2 me-2"></i>
+                            Card
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button type="button" class="nav-link" id="paypal-tab" data-bs-toggle="tab" data-bs-target="#paypal-tab-pane" role="tab" aria-controls="paypal-tab-pane" aria-selected="false">
+                            <img src="assets/img/payment-methods/paypal-icon.svg" class="me-2" width="14" alt="PayPal">
+                            PayPal
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+
+                    <!-- Card tab -->
+                    <div class="tab-pane fade show active" id="card-tab-pane" role="tabpanel" aria-labelledby="card-tab">
+                        <form class="needs-validation" novalidate="">
+                            <div class="mb-3">
+                                <label for="card-number" class="form-label">Card number</label>
+                                <div class="position-relative" data-input-format="{&quot;creditCard&quot;: true}">
+                                    <input type="text" class="form-control form-icon-end" id="card-number" style="background-image: none" placeholder="XXXX XXXX XXXX XXXX" required="">
+                                    <span class="position-absolute d-flex top-50 end-0 translate-middle-y fs-5 text-body-tertiary me-3" data-card-icon=""></span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="card-name" class="form-label">Name on card</label>
+                                <input type="text" class="form-control" id="card-name" placeholder="Full name" required="">
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-7">
+                                    <label for="card-expiration" class="form-label">Expiration date</label>
+                                    <input type="text" class="form-control" id="card-expiration" data-input-format="{&quot;date&quot;: true, &quot;datePattern&quot;: [&quot;m&quot;, &quot;y&quot;]}" placeholder="MM/YY" required="">
+                                </div>
+                                <div class="col-5">
+                                    <label for="card-cvc" class="form-label">CVC</label>
+                                    <input type="text" class="form-control" id="card-cvc" data-input-format="{&quot;numericOnly&quot;: true, &quot;blocks&quot;: [3]}" placeholder="XXX" required="">
+                                </div>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <button type="reset" class="btn btn-secondary w-100" data-bs-dismiss="modal" data-bs-target="#addPaymentModal">Cancel</button>
+                                <button type="submit" class="btn btn-primary w-100">Add card</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- PayPal tab -->
+                    <div class="tab-pane fade" id="paypal-tab-pane" role="tabpanel" aria-labelledby="paypal-tab">
+                        <form class="needs-validation" novalidate="">
+                            <div class="mb-4">
+                                <label for="paypal-email" class="form-label">Email associated with PayPal</label>
+                                <input type="email" class="form-control" id="paypal-email" placeholder="Email address" required="">
+                                <div class="invalid-feedback">Please provide a valid email address!</div>
+                            </div>
+                            <div class="d-flex gap-3">
+                                <button type="reset" class="btn btn-secondary w-100" data-bs-dismiss="modal" data-bs-target="#addPaymentModal">Cancel</button>
+                                <button type="submit" class="btn btn-primary w-100">Continue</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

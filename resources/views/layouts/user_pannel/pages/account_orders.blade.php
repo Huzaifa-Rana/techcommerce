@@ -343,3 +343,117 @@
     </div>
 </div>
 @endsection
+
+@section('helper')
+<!-- Order details offcanvas -->
+<div class="offcanvas offcanvas-end pb-sm-2 px-sm-2" id="orderDetails" tabindex="-1" aria-labelledby="orderDetailsLabel" style="width: 500px">
+
+    <!-- Header -->
+    <div class="offcanvas-header align-items-start py-3 pt-lg-4">
+        <div>
+            <h4 class="offcanvas-title mb-1" id="orderDetailsLabel">Order # 78A6431D409</h4>
+            <span class="d-flex align-items-center fs-sm fw-medium text-body-emphasis">
+                <span class="bg-info rounded-circle p-1 me-2"></span>
+                In progress
+            </span>
+        </div>
+        <button type="button" class="btn-close mt-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+    <!-- Body -->
+    <div class="offcanvas-body d-flex flex-column gap-4 pt-2 pb-3">
+
+        <!-- Items -->
+        <div class="d-flex flex-column gap-3">
+
+            <!-- Item -->
+            <div class="d-flex align-items-center">
+                <a class="flex-shrink-0" href="shop-product-general-electronics.html">
+                    <img src="assets/img/shop/electronics/thumbs/01.png" width="110" alt="Smart Watch">
+                </a>
+                <div class="w-100 min-w-0 ps-2 ps-sm-3">
+                    <h5 class="d-flex animate-underline mb-2">
+                        <a class="d-block fs-sm fw-medium text-truncate animate-target" href="shop-product-general-electronics.html">Smart Watch Series 7, White</a>
+                    </h5>
+                    <div class="h6 mb-2">$429.00</div>
+                    <div class="fs-xs">Qty: 1</div>
+                </div>
+            </div>
+
+            <!-- Item -->
+            <div class="d-flex align-items-center">
+                <a class="flex-shrink-0" href="shop-product-general-electronics.html">
+                    <img src="assets/img/shop/electronics/thumbs/08.png" width="110" alt="iPhone 14">
+                </a>
+                <div class="w-100 min-w-0 ps-2 ps-sm-3">
+                    <h5 class="d-flex animate-underline mb-2">
+                        <a class="d-block fs-sm fw-medium text-truncate animate-target" href="shop-product-general-electronics.html">Apple iPhone 14 128GB White</a>
+                    </h5>
+                    <div class="h6 mb-2">$899.00</div>
+                    <div class="fs-xs">Qty: 1</div>
+                </div>
+            </div>
+
+            <!-- Item -->
+            <div class="d-flex align-items-center">
+                <a class="flex-shrink-0" href="shop-product-general-electronics.html">
+                    <img src="assets/img/shop/electronics/thumbs/09.png" width="110" alt="iPad Pro">
+                </a>
+                <div class="w-100 min-w-0 ps-2 ps-sm-3">
+                    <h5 class="d-flex animate-underline mb-2">
+                        <a class="d-block fs-sm fw-medium text-truncate animate-target" href="shop-product-general-electronics.html">Tablet Apple iPad Pro M2</a>
+                    </h5>
+                    <div class="h6 mb-2">$989.00</div>
+                    <div class="fs-xs">Qty: 1</div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Delivery + Payment info -->
+        <div class="border-top pt-4">
+            <h6>Delivery</h6>
+            <ul class="list-unstyled fs-sm mb-4">
+                <li class="d-flex justify-content-between mb-1">
+                    Estimated delivery date:
+                    <span class="text-body-emphasis fw-medium text-end ms-2">Feb 8, 2025 / 10:00 - 12:00</span>
+                </li>
+                <li class="d-flex justify-content-between mb-1">
+                    Shipping method:
+                    <span class="text-body-emphasis fw-medium text-end ms-2">Courier delivery</span>
+                </li>
+                <li class="d-flex justify-content-between">
+                    Shipping address:
+                    <span class="text-body-emphasis fw-medium text-end ms-2">567 Cherry Lane Apt B12,<br>Harrisburg</span>
+                </li>
+            </ul>
+            <h6>Payment</h6>
+            <ul class="list-unstyled fs-sm m-0">
+                <li class="d-flex justify-content-between mb-1">
+                    Payment method:
+                    <span class="text-body-emphasis fw-medium text-end ms-2">Cash on delivery </span>
+                </li>
+                <li class="d-flex justify-content-between mb-1">
+                    Tax collected:
+                    <span class="text-body-emphasis fw-medium text-end ms-2">$12.40</span>
+                </li>
+                <li class="d-flex justify-content-between">
+                    Shipping:
+                    <span class="text-body-emphasis fw-medium text-end ms-2">$26.50</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Total -->
+        <div class="d-flex align-items-center justify-content-between fs-sm border-top pt-4">
+            Estimated total:
+            <span class="h5 text-end ms-2 mb-0">$2,105.90</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="offcanvas-header">
+        <a class="btn btn-lg btn-secondary w-100" href="#!">Change the delivery time</a>
+    </div>
+</div>
+@endsection
