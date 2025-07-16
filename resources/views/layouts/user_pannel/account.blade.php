@@ -40,7 +40,7 @@
                     <!-- Body (Navigation) -->
                     <div class="offcanvas-body d-block pt-2 pt-lg-4 pb-lg-0">
                         <nav class="list-group list-group-borderless">
-                            <a class="list-group-item list-group-item-action d-flex align-items-center pe-none {{ request()->routeIs('account.orders') ? 'active' : '' }}" href="{{ route('account.orders') }}">
+                            <a class="list-group-item list-group-item-action d-flex align-items-center  {{ request()->routeIs('account.orders') ? 'active' : '' }}" href="{{ route('account.orders') }}">
                                 <i class="ci-shopping-bag fs-base opacity-75 me-2"></i>
                                 Orders
                                 <span class="badge bg-primary rounded-pill ms-auto">1</span>
