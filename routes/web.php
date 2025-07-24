@@ -65,3 +65,6 @@ Route::prefix('account')->group(function () {
         return view('layouts.user_pannel.pages.account_addresses');
     })->name('account.addresses');
 });
+
+
+require __DIR__ . '/auth.php';

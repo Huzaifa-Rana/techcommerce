@@ -59,7 +59,6 @@
             <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-
             <!-- Customizer settings -->
             <div class="customizer-collapse collapse show" id="customizerSettings">
 
