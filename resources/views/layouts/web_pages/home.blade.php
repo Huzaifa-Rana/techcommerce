@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-lg-12 offset-lg-0">
                 <div class="position-relative">
-                    <span class="position-absolute top-0 start-0 w-100 h-100 rounded-5 d-none-dark rtl-flip" style="background: linear-gradient(90deg, #accbee 0%, #e7f0fd 100%)"></span>
+                    <span class="position-absolute top-0 start-0 w-100 h-100 rounded-5 d-none-dark rtl-flip" style="background: linear-gradient(90deg, #38379f 0%, #e7f0fd 100%)"></span>
                     <span class="position-absolute top-0 start-0 w-100 h-100 rounded-5 d-none d-block-dark rtl-flip" style="background: linear-gradient(90deg, #1b273a 0%, #1f2632 100%)"></span>
                     <div class="row justify-content-center position-relative z-2">
                         <div class="col-xl-5 col-xxl-4 offset-xxl-1 d-flex align-items-center mt-xl-n3">
@@ -1164,11 +1164,11 @@
             <div class="col-md-3 mb-n4 mb-md-0">
                 <div class="position-relative d-flex flex-column align-items-center justify-content-center h-100 py-5">
                     <div class="position-absolute top-0 start-0 w-100 h-100 d-none d-md-block">
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded-5 d-none-dark" style="background-color: #accbee"></span>
+                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded-5 d-none-dark" style="background-color: #38379f"></span>
                         <span class="position-absolute top-0 start-0 w-100 h-100 rounded-5 d-none d-block-dark" style="background-color: #1b273a"></span>
                     </div>
                     <div class="position-absolute top-0 start-0 w-100 h-100 d-md-none">
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded-top-5 d-none-dark" style="background: linear-gradient(90deg, #accbee 0%, #e7f0fd 100%)"></span>
+                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded-top-5 d-none-dark" style="background: linear-gradient(90deg, #38379f 0%, #e7f0fd 100%)"></span>
                         <span class="position-absolute top-0 start-0 w-100 h-100 rounded-top-5 d-none d-block-dark" style="background: linear-gradient(90deg, #1b273a 0%, #1f2632 100%)"></span>
                     </div>
                     <div class="position-relative z-1 display-1 text-dark-emphasis text-nowrap mb-0">
@@ -1187,7 +1187,7 @@
                     </svg>
                 </div>
                 <div class="position-relative">
-                    <span class="position-absolute top-0 start-0 w-100 h-100 rounded-5 d-none-dark rtl-flip" style="background: linear-gradient(90deg, #accbee 0%, #e7f0fd 100%)"></span>
+                    <span class="position-absolute top-0 start-0 w-100 h-100 rounded-5 d-none-dark rtl-flip" style="background: linear-gradient(90deg, #38379f 0%, #e7f0fd 100%)"></span>
                     <span class="position-absolute top-0 start-0 w-100 h-100 rounded-5 d-none d-block-dark rtl-flip" style="background: linear-gradient(90deg, #1b273a 0%, #1f2632 100%)"></span>
                     <div class="row align-items-center position-relative z-2">
                         <div class="col-md-6 mb-3 mb-md-0">

@@ -89,10 +89,18 @@
                     </button>
 
                     <!-- Account button visible on screens > 768px wide (md breakpoint) -->
+
+                       @auth
                     <a class="btn btn-icon btn-lg fs-lg btn-outline-secondary border-0 rounded-circle animate-shake d-none d-md-inline-flex" href="{{ route('account.orders') }}">
                         <i class="ci-user animate-target"></i>
                         <span class="visually-hidden">Account</span>
                     </a>
+                      @else
+                      <a class="btn btn-icon btn-lg fs-lg btn-outline-secondary border-0 rounded-circle animate-shake d-none d-md-inline-flex" data-bs-toggle="modal" data-bs-target="#loginRegisterModal">
+                        <i class="ci-user animate-target"></i>
+                        <span class="visually-hidden">Account</span>
+                    </a>
+                       @endauth
 
                     <!-- Wishlist button visible on screens > 768px wide (md breakpoint) -->
                     <a class="btn btn-icon btn-lg fs-lg btn-outline-secondary border-0 rounded-circle animate-pulse d-none d-md-inline-flex" href="{{ route('account.wishlist') }}">

@@ -22,7 +22,7 @@
     <!-- <link rel="manifest" href="manifest.json"> -->
     <link rel="icon" type="image/svg+xml" href="assets/custom-icons/dark-logo-techcommerece.svg">
     <link rel="apple-touch-icon" href="assets/custom-icons/dark-logo-techcommerece.svg">
-
+@livewireStyles
     <!-- Theme switcher (color modes) -->
     <script src="assets/js/theme-switcher.js"></script>
 
@@ -45,6 +45,8 @@
 
     <!-- Customizer -->
     <script src="assets/js/customizer.min.js"></script>
+    
+
 </head>
 
 
@@ -198,6 +200,10 @@
 
     <!-- Navigation bar (Page header) -->
     @include('layouts.web_partials.navbar')
+
+    <!-- Login Registeration Modal -->
+    <livewire:login-register-modal />
+
 
 
     <!-- Page content -->
@@ -461,6 +467,7 @@
         Customize<i class="ci-settings fs-base ms-1 me-n2 animate-target"></i>
       </a>
     </div> --}}
+@livewireScripts
 
 
     <!-- Vendor scripts -->

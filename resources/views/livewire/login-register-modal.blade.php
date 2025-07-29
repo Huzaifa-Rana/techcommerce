@@ -1,5 +1,4 @@
-<!-- Custom modal markup with tabs, forms and cover image -->
-<div class="modal fade" id="loginRegisterModal" tabindex="-1" role="dialog">
+<div class="modal fade" id="loginRegisterModal" tabindex="-1" role="dialog" wire:ignore.self>
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content row row-cols-1 row-cols-lg-2 flex-row g-0 overflow-hidden">
             <div class="col order-lg-2">
@@ -15,90 +14,123 @@
                         style="background: linear-gradient(-90deg, #1b273a 0%, #1f2632 100%)"></span>
                 </div>
             </div>
+
             <div class="col d-flex flex-column order-lg-1">
                 <div class="modal-header d-block border-0 pt-sm-5 px-sm-5 pb-2">
-                    <ul class="nav nav-tabs mt-sm-n2" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button type="button" class="nav-link text-nowrap active" data-bs-toggle="tab"
-                                data-bs-target="#signin" role="tab" aria-controls="signin" aria-selected="true">
-                                <i class="ci-log-in fs-base opacity-75 ms-n1 me-2"></i>
-                                Sign in
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button type="button" class="nav-link text-nowrap" data-bs-toggle="tab"
-                                data-bs-target="#signup" role="tab" aria-controls="signup"
-                                aria-selected="false">
-                                <i class="ci-user fs-base opacity-75 ms-n1 me-2"></i>
-                                Sign up
-                            </button>
-                        </li>
-                    </ul>
+                  <ul class="nav nav-tabs mt-sm-n2" role="tablist">
+    <li class="nav-item" role="presentation">
+        <a href="#" class="nav-link text-nowrap @if($activeTab === 'login') active @endif"
+           wire:click.prevent="$set('activeTab', 'login')">
+            <i class="ci-log-in fs-base opacity-75 ms-n1 me-2"></i>
+            Sign in
+        </a>
+    </li>
+    <li class="nav-item" role="presentation">
+        <a href="#" class="nav-link text-nowrap @if($activeTab === 'signup') active @endif"
+           wire:click.prevent="$set('activeTab', 'signup')">
+            <i class="ci-user fs-base opacity-75 ms-n1 me-2"></i>
+            Sign up
+        </a>
+    </li>
+</ul>
+
                 </div>
+
                 <div class="modal-body tab-content px-sm-5 pb-sm-5">
-                    <div class="tab-pane fade show active" id="signin" role="tabpanel">
+
+                    <!-- Sign In Tab -->
+                    <div class="tab-pane fade show @if($activeTab === 'login') show active @endif" id="signin" role="tabpanel">
                         <h2 class="h5 mb-4">Welcome back</h2>
-                        <form id="login-form" method="POST" action="{{ route('login') }}">
-                            @csrf
+
+                        @if (session('status'))
+                            <div class="alert alert-success">{{ session('status') }}</div>
+                        @endif
+
+                        <form wire:submit.prevent="login">
                             <div class="position-relative mb-4">
-                                <input type="email" name="email" class="form-control" placeholder="Email"
-                                    required :value="old('email')" autofocus>
+                                <input type="email" class="form-control" placeholder="Email"
+                                    wire:model.defer="login_email" required autofocus>
+                                @error('login_email')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
+
                             <div class="mb-4">
                                 <div class="password-toggle">
-                                    <input type="password" name="password" class="form-control"
-                                        placeholder="Password" required>
+                                    <input type="password" class="form-control"
+                                        placeholder="Password" wire:model.defer="login_password" required>
                                     <label class="password-toggle-button fs-lg" aria-label="Show/hide password">
                                         <input type="checkbox" class="btn-check">
                                     </label>
                                 </div>
+                                @error('login_password')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
+
                             <div class="form-check mb-4">
-                                <input type="checkbox" class="form-check-input" id="remember-30" name="remember">
+                                <input type="checkbox" class="form-check-input" id="remember-30" wire:model="remember">
                                 <label for="remember-30" class="form-check-label">Remember for 30 days</label>
                             </div>
+
                             <button type="submit" class="btn btn-primary w-100">Sign In</button>
                         </form>
                     </div>
-                    <div class="tab-pane fade" id="signup" role="tabpanel">
+
+                    <!-- Sign Up Tab -->
+                    <div class="tab-pane fade @if($activeTab === 'signup') show active @endif" id="signup" role="tabpanel">
                         <h2 class="h5">Create an account</h2>
-                        <form id="register-form" method="POST" action="{{ route('register') }}">
-                            @csrf
+
+                        <form wire:submit.prevent="register">
                             <div class="position-relative mb-3">
                                 <label for="register-name" class="form-label">Name</label>
-                                <input type="text" name="name" class="form-control" id="register-name"
-                                    required :value="old('name')">
+                                <input type="text" class="form-control" id="register-name"
+                                    wire:model.defer="name" required>
+                                @error('name')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
+
                             <div class="position-relative mb-3">
                                 <label for="register-email" class="form-label">Email</label>
-                                <input type="email" name="email" class="form-control" id="register-email"
-                                    required :value="old('email')">
+                                <input type="email" class="form-control" id="register-email"
+                                    wire:model.defer="email" required>
+                                @error('email')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
+
                             <div class="mb-4">
                                 <label for="register-password" class="form-label">Password</label>
                                 <div class="password-toggle">
-                                    <input type="password" name="password" class="form-control"
-                                        id="register-password" minlength="8" placeholder="Minimum 8 characters"
+                                    <input type="password" class="form-control" id="register-password"
+                                        wire:model.defer="password" minlength="8" placeholder="Minimum 8 characters"
                                         required>
                                     <label class="password-toggle-button fs-lg" aria-label="Show/hide password">
                                         <input type="checkbox" class="btn-check">
                                     </label>
                                 </div>
+                                @error('password')
+                                    <small class="text-danger">{{ $message }}</small>
+                                @enderror
                             </div>
+
                             <div class="mb-4">
                                 <label for="register-password-confirm" class="form-label">Confirm Password</label>
                                 <div class="password-toggle">
-                                    <input type="password" name="password_confirmation" class="form-control"
-                                        id="register-password-confirm" minlength="8"
-                                        placeholder="Confirm password" required>
+                                    <input type="password" class="form-control"
+                                        id="register-password-confirm" wire:model.defer="password_confirmation"
+                                        minlength="8" placeholder="Confirm password" required>
                                     <label class="password-toggle-button fs-lg" aria-label="Show/hide password">
                                         <input type="checkbox" class="btn-check">
                                     </label>
                                 </div>
                             </div>
+
                             <button type="submit" class="btn btn-primary w-100">Create an account</button>
                         </form>
                     </div>
+
                 </div>
             </div>
         </div>

@@ -22,49 +22,26 @@ Route::get('/shop/checkout', function () {
     return view('layouts.web_pages.checkout');
 })->name('checkout');
 
-Route::prefix('account')->group(function () {
+Route::middleware('auth')->prefix('account')->name('account.')->group(function () {
     Route::get('/orders', function () {
         return view('layouts.user_pannel.pages.account_orders');
-    })->name('account.orders');
+    })->name('orders');
 
     Route::get('/wishlist', function () {
         return view('layouts.user_pannel.pages.account_wishlist');
-    })->name('account.wishlist');
+    })->name('wishlist');
 
     Route::get('/payment', function () {
         return view('layouts.user_pannel.pages.account_payment');
-    })->name('account.payment');
+    })->name('payment');
 
     Route::get('/info', function () {
         return view('layouts.user_pannel.pages.account_info');
-    })->name('account.info');
+    })->name('info');
 
     Route::get('/addresses', function () {
         return view('layouts.user_pannel.pages.account_addresses');
-    })->name('account.addresses');
+    })->name('addresses');
 });
-
-Route::prefix('account')->group(function () {
-    Route::get('/orders', function () {
-        return view('layouts.user_pannel.pages.account_orders');
-    })->name('account.orders');
-
-    Route::get('/wishlist', function () {
-        return view('layouts.user_pannel.pages.account_wishlist');
-    })->name('account.wishlist');
-
-    Route::get('/payment', function () {
-        return view('layouts.user_pannel.pages.account_payment');
-    })->name('account.payment');
-
-    Route::get('/info', function () {
-        return view('layouts.user_pannel.pages.account_info');
-    })->name('account.info');
-
-    Route::get('/addresses', function () {
-        return view('layouts.user_pannel.pages.account_addresses');
-    })->name('account.addresses');
-});
-
 
 require __DIR__ . '/auth.php';
